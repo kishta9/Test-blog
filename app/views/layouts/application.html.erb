@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body style="background-color:#D3D3D3">
+
+<%= link_to image_tag('logo.png', :size => '115x115'), '/' %>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div id="notice"><%= notice %></div>
+
+<h1>comments</h1>
+
+<ul>
+<% @comments.each do |comment| %>
+<li id="comment_<%= comment.id %>">
+<%= link_to comment.content, comment_path(comment) %>
+<%= link_to 'Edit', edit_comment_path(comment) %>
+<%= link_to 'Delete', comment, :confirm => 'Sure?',
+                            :method => :delete,
+                            :remote => :true %>
+</li>
+<% end %>
+</ul>
+
+<%= link_to 'home', comments_path %> | <%= link_to 'New', new_comment_path %>
